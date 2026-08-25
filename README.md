@@ -23,5 +23,5 @@ A responsive, dark-themed portfolio website showcasing my skills, projects, and 
 
 ## 📬 Contact
 - Email: builtbyneha@gmail.com
-- LinkedIn: linkedin.com/in/builtbyneha
-- Portfolio: builtbyneha-portfolio.netlify.app
+- LinkedIn: https://www.linkedin.com/in/builtbyneha/
+- Portfolio: https://builtbyneha.github.io/
