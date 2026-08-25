@@ -4,12 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BuiltByNeha — From Idea to Internet</title>
-<meta name="description" content="Neha Nanwani — Full-Stack PHP/MySQL Web Developer building inventory, sales, and business management systems from idea to internet.">
-<meta property="og:title" content="BuiltByNeha — From Idea to Internet">
-<meta property="og:description" content="Full-Stack PHP/MySQL Web Developer from Agra, India. I take your idea from database design to a live, working product.">
-<meta property="og:image" content="images/logo.png">
-<meta property="og:type" content="website">
-<link rel="icon" type="image/png" href="images/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -57,8 +51,6 @@ body {
   z-index: 9999;
   background: url('images/bg.png') center/cover no-repeat;
   cursor: pointer;
-  touch-action: none;
-  overscroll-behavior: none;
 }
 
 /* click-to-flash animation */
@@ -269,27 +261,11 @@ nav {
 }
 .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(193,77,255,0.55) !important; }
 
-/* HAMBURGER — hidden on desktop */
-.nav-burger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  z-index: 101;
-}
-.nav-burger span { width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
-.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-burger.open span:nth-child(2) { opacity: 0; }
-.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
 
 /* ---------- HERO ---------- */
 .hero {
   min-height: auto;
-  padding: 160px 60px 80px;
+  padding: 130px 60px 80px;
   background: #18111A;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -411,8 +387,7 @@ nav {
 /* ============================================================
    GENERIC SECTION STYLES
    ============================================================ */
-section { padding: 56px 60px; scroll-margin-top: 130px; }
-section[id] { scroll-margin-top: 130px; }
+section { padding: 56px 60px; }
 .container { max-width: 1100px; margin: 0 auto; }
 .sec-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin-bottom: 10px; }
 .sec-title { font-size: clamp(28px, 3vw, 44px); font-weight: 900; color: white; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
@@ -551,27 +526,9 @@ footer {
 /* ---------- MOBILE RESPONSIVE ---------- */
 @media (max-width: 900px) {
   nav { padding: 0 20px; }
-  .nav-burger { display: flex; }
-  .nav-links {
-    position: fixed;
-    top: 130px; left: 0; right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: rgba(24,17,26,0.97);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease;
-  }
-  .nav-links.open { max-height: 400px; }
-  .nav-links li { width: 100%; }
-  .nav-links li:not(:last-child) { display: block; }
-  .nav-links a { display: block; padding: 16px 24px; }
-  .nav-links .nav-cta { margin: 12px 24px; text-align: center; }
+  .nav-links li:not(:last-child) { display: none; }
   section { padding: 60px 24px; }
-  .hero { grid-template-columns: 1fr; padding: 150px 24px 60px; }
+  .hero { grid-template-columns: 1fr; padding: 110px 24px 60px; }
   .hero-right { display: none; }
   .about-grid { grid-template-columns: 1fr; }
   .proj-head, .proj-body { padding: 24px; }
@@ -601,7 +558,7 @@ footer {
   </div>
 </div>
 
-<div id="intro" onclick="turnOnLamp()">
+<div id="intro" onclick="turnOnLamp()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();turnOnLamp();}" role="button" tabindex="0" aria-label="Enter portfolio">
   <div class="intro-overlay"></div>
 
   <div class="intro-top">
@@ -634,7 +591,7 @@ footer {
       <a href="mailto:builtbyneha@gmail.com" onclick="event.stopPropagation()"><i class="fa-solid fa-envelope"></i></a>
     </div>
     <div class="intro-scroll">SCROLL<div class="scroll-line"><div class="scroll-dot"></div></div></div>
-    <div class="intro-copy">© 2025 BuiltByNeha</div>
+    <div class="intro-copy">© 2026 BuiltByNeha</div>
   </div>
 </div>
 
@@ -646,10 +603,7 @@ footer {
 
   <nav id="navbar">
     <div class="nav-logo"><img src="images/logo.png" alt="BuiltByNeha"></div>
-    <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
+    <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -839,7 +793,7 @@ footer {
         <p class="contact-sub">Available for freelance projects, internships, and junior developer roles. Let's talk.</p>
         <div class="contact-btns">
           <a href="mailto:builtbyneha@gmail.com" class="cbtn primary"><i class="fa-solid fa-envelope"></i> builtbyneha@gmail.com</a>
-          <a href="http://rbsinventrack.great-site.net/login.php" target="_blank" class="cbtn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Project</a>
+          <a href="https://rbsinventrack.great-site.net/login.php" target="_blank" class="cbtn"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Project</a>
           <a href="https://www.linkedin.com/in/builtbyneha" target="_blank" class="cbtn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
           <a href="https://github.com/builtbyneha" target="_blank" class="cbtn"><i class="fa-brands fa-github"></i> GitHub</a>
         </div>
@@ -892,22 +846,6 @@ footer {
     }, 3400);
   }
 
-  // Mobile hamburger menu toggle
-  const navBurger = document.getElementById('navBurger');
-  const navLinks = document.getElementById('navLinks');
-  navBurger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navBurger.classList.toggle('open', isOpen);
-    navBurger.setAttribute('aria-expanded', isOpen);
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      navBurger.classList.remove('open');
-      navBurger.setAttribute('aria-expanded', 'false');
-    });
-  });
-
   // Add shadow to nav bar once you scroll down
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').style.boxShadow =
@@ -928,22 +866,6 @@ footer {
 
   // Lock page scroll while intro page is showing
   document.body.style.overflow = 'hidden';
-  document.body.style.position = 'fixed';
-  document.body.style.width = '100%';
-
-  document.getElementById('intro').addEventListener('touchmove', function(e) {
-    e.preventDefault();
-  }, { passive: false });
-
-  // unlock body scroll properly once portfolio is revealed
-  const _origTurnOnLamp = turnOnLamp;
-  turnOnLamp = function() {
-    _origTurnOnLamp();
-    setTimeout(() => {
-      document.body.style.position = '';
-      document.body.style.width = '';
-    }, 2900);
-  };
 </script>
 </body>
 </html>
