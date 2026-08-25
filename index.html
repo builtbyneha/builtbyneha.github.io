@@ -49,7 +49,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: url('bg.png') center/cover no-repeat;
+  background: url('images/bg.png') center/cover no-repeat;
   cursor: pointer;
 }
 
@@ -265,7 +265,7 @@ nav {
 /* ---------- HERO ---------- */
 .hero {
   min-height: auto;
-  padding: 160px 60px 80px;
+  padding: 130px 60px 80px;
   background: #18111A;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -387,8 +387,7 @@ nav {
 /* ============================================================
    GENERIC SECTION STYLES
    ============================================================ */
-section { padding: 56px 60px; scroll-margin-top: 130px; }
-section[id] { scroll-margin-top: 130px; }
+section { padding: 56px 60px; }
 .container { max-width: 1100px; margin: 0 auto; }
 .sec-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--pink); margin-bottom: 10px; }
 .sec-title { font-size: clamp(28px, 3vw, 44px); font-weight: 900; color: white; letter-spacing: -1.5px; margin-bottom: 14px; line-height: 1.1; }
@@ -529,7 +528,7 @@ footer {
   nav { padding: 0 20px; }
   .nav-links li:not(:last-child) { display: none; }
   section { padding: 60px 24px; }
-  .hero { grid-template-columns: 1fr; padding: 150px 24px 60px; }
+  .hero { grid-template-columns: 1fr; padding: 110px 24px 60px; }
   .hero-right { display: none; }
   .about-grid { grid-template-columns: 1fr; }
   .proj-head, .proj-body { padding: 24px; }
@@ -555,7 +554,7 @@ footer {
 <!-- SPLASH SCREEN -->
 <div id="splash">
   <div class="splash-logo">
-    <img src="logo.png" alt="BuiltByNeha">
+    <img src="images/logo.png" alt="BuiltByNeha">
   </div>
 </div>
 
@@ -564,7 +563,7 @@ footer {
 
   <div class="intro-top">
     <div class="intro-logo">
-      <img src="logo.png" alt="BuiltByNeha">
+      <img src="images/logo.png" alt="BuiltByNeha">
     </div>
     <a href="#about" class="intro-about-link" onclick="event.stopPropagation();turnOnLamp()">About Me</a>
   </div>
@@ -603,7 +602,7 @@ footer {
 <div id="portfolio">
 
   <nav id="navbar">
-    <div class="nav-logo"><img src="logo.png" alt="BuiltByNeha"></div>
+    <div class="nav-logo"><img src="images/logo.png" alt="BuiltByNeha"></div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -623,7 +622,7 @@ footer {
       <p class="hero-desc">Full-Stack PHP Developer from Agra, India. I take your idea from database design and backend logic all the way to a live, working product on the internet.</p>
       <div class="hero-btns">
         <a href="#project" class="btn-pink"><i class="fa-solid fa-rocket"></i> View My Work</a>
-        <a href="Neha_CV.pdf" download="Neha_Nanwani_CV.pdf" class="btn-ghost"><i class="fa-solid fa-download"></i> Download Resume</a>
+        <a href="images/Neha_CV.pdf" download="Neha_Nanwani_CV.pdf" class="btn-ghost"><i class="fa-solid fa-download"></i> Download Resume</a>
       </div>
       <div class="tech-row">
         <span class="tech-label">Tech I work with:</span>
@@ -636,7 +635,7 @@ footer {
     </div>
     <div class="hero-right">
       <div class="hero-photo-wrap">
-        <img src="hero.png" alt="Neha — Web Developer" class="hero-photo">
+        <img src="images/hero.png" alt="Neha — Web Developer" class="hero-photo">
 
       </div>
     </div>
@@ -647,7 +646,7 @@ footer {
     <div class="container">
       <div class="about-grid reveal">
         <div class="about-img-wrap">
-          <img src="about.jpg" alt="Neha Nanwani" class="about-photo">
+          <img src="images/about.jpg" alt="Neha Nanwani" class="about-photo">
         </div>
         <div class="about-text">
           <div class="sec-tag">About Me</div>
@@ -804,7 +803,7 @@ footer {
 
   <!-- ===== FOOTER ===== -->
   <footer>
-    <div class="footer-logo"><img src="logo.png" alt="BuiltByNeha"></div>
+    <div class="footer-logo"><img src="images/logo.png" alt="BuiltByNeha"></div>
     <div class="footer-text">Designed & Built with <span>♥</span> by Neha Nanwani &nbsp;·&nbsp; builtbyneha@gmail.com</div>
     <div class="footer-links">
       <a href="https://github.com/builtbyneha" target="_blank"><i class="fa-brands fa-github"></i></a>
